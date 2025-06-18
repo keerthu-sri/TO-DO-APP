@@ -1,1 +1,58 @@
 <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>To-do List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-app">
+        <h1>TIC TA<s style=color:black; >C</s>SKS APP</h1>
+
+        <!-- Progress Section -->
+        <div class="stat-container">
+          <div class="details">
+            <h3>Keep it up!</h3>
+            <div id="progressbar">
+              <div id="progress"></div>
+            </div>
+          </div>
+          <div class="stats-number">
+            <p id="numbers">0 / 0</p>
+          </div>
+        </div>
+
+        <!-- Input Bar -->
+        <form class="input-area" onsubmit="return false;">
+          <input type="text" id="task-input" placeholder="Add a new task" />
+          <button type="submit" id="add-task-btn">➕</button>
+        </form>
+
+        <!-- Task Section -->
+        <div class="todos-container">
+          <ul id="task-list"></ul>
+          <img class="empty-image" src="images/empty.jpg" alt="empty" />
+        </div>
+
+        <!-- Completion Message -->
+        <p id="congrats-message" class="congrats-message">Congrats on completing all!! 🎉</p>
+        <button id="reset-btn" class="reset-btn">Reset</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+    
+  </body>
+</html>
